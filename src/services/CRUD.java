@@ -44,7 +44,7 @@ public class CRUD {
 
             entityManager.close();
             emFactory.close();
-            
+
         }
 
 }
