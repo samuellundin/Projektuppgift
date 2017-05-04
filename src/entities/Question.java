@@ -20,7 +20,6 @@ public class Question {
 
 
     @OneToMany(targetEntity = Answer.class)
-
     private List answerList;
 
     /*Constructors*/
