@@ -17,6 +17,7 @@ public class Answer {
     private int answerId;
     private String answerText;
 
+    /*Constructors*/
     public Answer(){
 
     }
@@ -25,6 +26,7 @@ public class Answer {
         this.answerText =  answerText;
     }
 
+    /*Getters and setters*/
     public int getAnswerId() {
         return  answerId;
     }
