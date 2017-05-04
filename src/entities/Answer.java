@@ -14,9 +14,16 @@ public class Answer {
 
     @Id
     @GeneratedValue( strategy= GenerationType.AUTO )
-
     private int answerId;
     private String answerText;
+
+    public Answer(){
+
+    }
+
+    public Answer(String answerText){
+        this.answerText =  answerText;
+    }
 
     public int getAnswerId() {
         return  answerId;

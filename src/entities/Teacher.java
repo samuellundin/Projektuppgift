@@ -1,7 +1,9 @@
 package entities;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+import java.util.List;
 
 /**
  * Created by johan on 2017-05-03.
@@ -10,6 +12,9 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @Entity
 @PrimaryKeyJoinColumn(referencedColumnName="uId")
 public class Teacher extends User {
+
+    @OneToMany(targetEntity = Test.class)
+    private List testList;
 
     public Teacher(){
 
@@ -25,4 +30,5 @@ public class Teacher extends User {
         return super.getuForName() + super.getuSurName();
 
     }
+
 }
