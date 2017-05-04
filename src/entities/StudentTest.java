@@ -9,7 +9,6 @@ import java.util.List;
 
 
 @Entity
-@PrimaryKeyJoinColumn(referencedColumnName = "uId")
 public class StudentTest {
 
 
