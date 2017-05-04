@@ -9,14 +9,15 @@ import java.util.List;
 
 
 @Entity
+@PrimaryKeyJoinColumn(referencedColumnName = "uId")
 public class StudentTest {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @PrimaryKeyJoinColumn(referencedColumnName = "uId")
-    @OneToMany(targetEntity = studentQuestion.class)
-    private List studenttQuestionList;
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @OneToMany(targetEntity = StudentQuestion.class)
+ private List StudentQuestionList;
+
+    @Id
     private int studentTestId;
 
     private int date;
