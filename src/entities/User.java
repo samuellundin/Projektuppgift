@@ -3,49 +3,56 @@ package entities;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by johan on 2017-05-03.
- */
 @Entity
 @Table
-@Inheritance(strategy = InheritanceType.JOINED)
-
-public class User implements Serializable{
-
-    public User(String uForName, String uSurName){
-        this.uForName =  uForName;
-        this.uSurName = uSurName;
-
-
-    }
-
-    public User(){
-
-    }
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int uId;
+    private int userId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
 
-    String uForName;
-    String uSurName;
-
-    public String getuForName() {
-        return uForName;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setuForName(String uForName) {
-        this.uForName = uForName;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getuSurName() {
-        return uSurName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setuSurName(String uSurName) {
-        this.uSurName = uSurName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
 }
