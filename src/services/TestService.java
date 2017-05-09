@@ -3,8 +3,8 @@ package services;
 public class TestService {
 
     public static void main(String[] args){
-        CRUD crud = new CRUD();
-        crud.createUser("firstname", "lastname", "email", "password", 1);
+        Service service = new Service();
+        service.addUser("firstname", "lastname", "email", "password", 1);
     }
 
 }
