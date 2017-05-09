@@ -7,6 +7,11 @@
     <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
 
         <class>entities.User</class>
+        <class>entities.Answer</class>
+        <class>entities.Question</class>
+        <class>entities.StudentTest</class>
+        <class>entities.Test</class>
+        <class>entities.StudentQuestion</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testverktyg_db?useSSL=true"/>

@@ -11,12 +11,11 @@ import java.util.List;
 @Entity
 public class StudentTest {
 
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @OneToMany(targetEntity = StudentQuestion.class)
- private List StudentQuestionList;
+    private List StudentQuestionList;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int studentTestId;
 
     private int date;

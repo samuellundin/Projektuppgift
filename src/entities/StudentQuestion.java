@@ -17,8 +17,6 @@ public class StudentQuestion {
     private String studentAnswer;
     private int studentTestId;
 
-    @OneToMany(targetEntity = StudentTest.class)
-    private List studentTestList;
 
     public StudentQuestion() {
 
@@ -54,11 +52,4 @@ public class StudentQuestion {
         this.studentTestId = studentTestId;
     }
 
-    public List getStudentTestList() {
-        return studentTestList;
-    }
-
-    public void setStudentTestList(List studentTestList) {
-        this.studentTestList = studentTestList;
-    }
 }
