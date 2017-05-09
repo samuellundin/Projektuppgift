@@ -19,4 +19,21 @@ public class Service {
             return null;
         }
     }
+
+    public void addUser(String firstName, String lastName, String email, String password, int role) {
+        User user = new User();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setRole(role);
+
+        entityManager.getTransaction().begin();
+        entityManager.persist(user);
+        entityManager.getTransaction().commit();
+
+        entityManager.close();
+        managerFactory.close();
+    }
+
 }
