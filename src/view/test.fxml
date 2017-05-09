@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="controllers.TestController" alignment="CENTER" hgap="20" vgap="20"
+          xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <Label text="Title:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label text="Start Date:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Label text="End Date:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Label text="Time:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Label text="Self Correcting:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Label text="Show Results:" GridPane.halignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="6">
+        <Button text="Cancel" onAction="#cancelAction"/>
+        <Button text="Next" onAction="#nextAction"/>
+        <Button text="Save" onAction="#saveAction"/>
+    </HBox>
+</GridPane>

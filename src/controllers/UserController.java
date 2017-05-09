@@ -3,6 +3,7 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import services.Service;
@@ -22,6 +23,8 @@ public class UserController implements Initializable {
     private TextField passwordField;
     @FXML
     private ComboBox roleComboBox;
+    @FXML
+    private Label messageLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -34,8 +37,12 @@ public class UserController implements Initializable {
         String email = emailField.getText();
         String password = passwordField.getText();
         int role = roleComboBox.getSelectionModel().getSelectedIndex() +1;
-        Service service = new Service();
-        service.addUser(firstname, lastname, email, password, role);
+        if(firstname.length() > 0 && lastname.length() > 0 && email.length() > 0 && password.length() > 0 && role != 0) {
+            Service service = new Service();
+            service.addUser(firstname, lastname, email, password, role);
+        } else {
+            messageLabel.setText("");
+        }
     }
 
     public void cancelAction() {

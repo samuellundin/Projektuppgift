@@ -19,7 +19,8 @@
     <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
     <ComboBox fx:id="roleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-    <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+    <Label fx:id="messageLabel" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="6">
         <Button text="Cancel" onAction="#cancelAction"/>
         <Button text="Save" onAction="#saveAction"/>
     </HBox>

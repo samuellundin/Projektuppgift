@@ -1,5 +1,5 @@
 .text-field, .combo-box {
-    -fx-min-width: 220px;
+    -fx-min-width: 230px;
     -fx-font-size: 16px;
     -fx-font-family: "Arial";
 }
