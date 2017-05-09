@@ -1,6 +1,5 @@
 package controllers;
 
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,7 +13,7 @@ public class Controller {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("../view/test.fxml"));
             Stage stage = new Stage();
-            stage.setScene(new Scene(root, 400, 400));
+            stage.setScene(new Scene(root, 640, 480));
             stage.setTitle("Add Test");
             stage.show();
         } catch (IOException e) {
