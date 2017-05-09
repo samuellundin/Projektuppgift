@@ -92,3 +92,9 @@ hs_err_pid*
 /.idea/
 src/META-INF/persistence.xml
 out/production/Projektuppgift/META-INF/persistence.xml
+
+src/META-INF/persistence.xml
+
+*.xml
+
+.idea/libraries/JPA_2_0_2_0.xml

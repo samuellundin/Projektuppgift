@@ -21,6 +21,9 @@ public class Service {
     }
 
     public void addUser(String firstName, String lastName, String email, String password, int role) {
+
+
+
         User user = new User();
         user.setFirstName(firstName);
         user.setLastName(lastName);
