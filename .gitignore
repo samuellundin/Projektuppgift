@@ -89,5 +89,5 @@ hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,intellij
 
-.idea/workspace.xml
-.idea/libraries/JPA_2_0_2_0.xml
+/.idea/
+src/META-INF/persistence.xml

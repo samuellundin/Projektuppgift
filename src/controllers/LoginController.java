@@ -29,7 +29,7 @@ public class LoginController {
         User user = service.login(email, password);
         if(user != null) {
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("../views/start.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("../view/start.fxml"));
                 Stage stage = (Stage) messageLabel.getScene().getWindow();
                 stage.setScene(new Scene(root, 800, 600));
                 stage.setTitle("Start");
@@ -42,4 +42,7 @@ public class LoginController {
         }
     }
 
+    public void closeAction() {
+        System.exit(0);
+    }
 }
