@@ -9,33 +9,23 @@ import java.util.List;
 @Entity
 public class Question {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int questionId;
-
-    private int questionNumber;
-    private char questionType;
-    private String correctAnswer;
-
+    private String question;
+    private char type;
+    private int points;
+    private int order;
 
     @OneToMany(targetEntity = Answer.class)
-    private List answerList;
+    private List<Answer> answerList;
 
     /*Constructors*/
     public Question(){
 
     }
 
-    public Question(int questionId, int questionNumber, char questionType, String correctAnswer){
-        this.questionId = questionId;
-        this.questionNumber = questionNumber;
-        this.questionType = questionType;
-        this.correctAnswer = correctAnswer;
-    }
-
     /*Getters and setters*/
-
     public int getQuestionId() {
         return questionId;
     }
@@ -44,35 +34,43 @@ public class Question {
         this.questionId = questionId;
     }
 
-    public int getQuestionNumber() {
-        return questionNumber;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setQuestionNumber(int questionNumber) {
-        this.questionNumber = questionNumber;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public char getQuestionType() {
-        return questionType;
+    public char getType() {
+        return type;
     }
 
-    public void setQuestionType(char questionType) {
-        this.questionType = questionType;
+    public void setType(char type) {
+        this.type = type;
     }
 
-    public String getCorrectAnswer() {
-        return correctAnswer;
+    public int getPoints() {
+        return points;
     }
 
-    public void setCorrectAnswer(String correctAnswer) {
-        this.correctAnswer = correctAnswer;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
-    public List getAnswerList() {
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
+
+    public List<Answer> getAnswerList() {
         return answerList;
     }
 
-    public void setAnswerList(List answerList) {
+    public void setAnswerList(List<Answer> answerList) {
         this.answerList = answerList;
     }
 

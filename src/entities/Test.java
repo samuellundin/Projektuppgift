@@ -1,42 +1,32 @@
 package entities;
 
 import javax.persistence.*;
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
 
-/**
- * Created by johan on 2017-05-04.
- */
 @Entity
 public class Test {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int testId;
-
-    private String testName;
-    private int numQuestion;
-    private String description;
-
+    private String title;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private int time;
+    private int maxPoints;
+    private boolean selfCorrecting;
+    private boolean showResult;
 
     @OneToMany(targetEntity = Question.class)
-    private List questionList;
+    private List<Question> questionList;
 
     /*Constructors*/
+    public Test() {
 
-    public Test(){
-
-    }
-
-    public Test(int testId, String testName, int numQuestion, String description){
-        this.testId = testId;
-        this.testName = testName;
-        this.numQuestion = numQuestion;
-        this.description = description;
     }
 
     /*Getters and setters*/
-
     public int getTestId() {
         return testId;
     }
@@ -45,38 +35,68 @@ public class Test {
         this.testId = testId;
     }
 
-    public String getTestName() {
-        return testName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTestName(String testName) {
-        this.testName = testName;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getNumQuestion() {
-        return numQuestion;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setNumQuestion(int numQuestion) {
-        this.numQuestion = numQuestion;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
-    public String getDescription() {
-        return description;
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
-    public List getQuestionList() {
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public int getMaxPoints() {
+        return maxPoints;
+    }
+
+    public void setMaxPoints(int maxPoints) {
+        this.maxPoints = maxPoints;
+    }
+
+    public boolean isSelfCorrecting() {
+        return selfCorrecting;
+    }
+
+    public void setSelfCorrecting(boolean selfCorrecting) {
+        this.selfCorrecting = selfCorrecting;
+    }
+
+    public boolean isShowResult() {
+        return showResult;
+    }
+
+    public void setShowResult(boolean showResult) {
+        this.showResult = showResult;
+    }
+
+    public List<Question> getQuestionList() {
         return questionList;
     }
 
-    public void setQuestionList(List questionList) {
+    public void setQuestionList(List<Question> questionList) {
         this.questionList = questionList;
     }
-
-
 
 }

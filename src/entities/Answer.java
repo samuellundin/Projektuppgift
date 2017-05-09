@@ -5,41 +5,52 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Created by Leon on 2017-05-04.
- */
-
 @Entity
 public class Answer {
 
     @Id
     @GeneratedValue( strategy= GenerationType.AUTO )
     private int answerId;
-    private String answerText;
+    private String answer;
+    private int points;
+    private int order;
 
     /*Constructors*/
     public Answer(){
 
     }
 
-    public Answer(String answerText){
-        this.answerText =  answerText;
-    }
-
     /*Getters and setters*/
     public int getAnswerId() {
-        return  answerId;
+        return answerId;
     }
 
     public void setAnswerId(int answerId) {
         this.answerId = answerId;
     }
 
-    public String getAnswerText() {
-        return answerText;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setAnswerText(String answerText) {
-        this.answerText = answerText;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
+
 }
