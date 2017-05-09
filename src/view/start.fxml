@@ -7,12 +7,29 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuItem?>
 
+<?import javafx.scene.control.SeparatorMenuItem?>
 <BorderPane fx:controller="controllers.Controller" stylesheets="/styles/Stylesheet.css"
             xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
     <top>
         <MenuBar>
             <Menu text="Test">
-                <MenuItem text="Add"/>
+                <MenuItem text="Add Test"/>
+                <MenuItem text="Edit Test"/>
+                <MenuItem text="Grade Test"/>
+                <MenuItem text="Share Test"/>
+            </Menu>
+            <Menu text="User">
+                <MenuItem text="Add User"/>
+                <MenuItem text="Edit User"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Add Group"/>
+                <MenuItem text="Edit Group"/>
+            </Menu>
+            <Menu text="More">
+                <MenuItem text="Take Test"/>
+                <MenuItem text="Show Result"/>
+                <MenuItem text="Settings"/>
+                <MenuItem text="Logout"/>
             </Menu>
         </MenuBar>
     </top>
