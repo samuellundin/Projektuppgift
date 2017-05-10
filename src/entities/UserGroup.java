@@ -11,11 +11,15 @@ import java.util.Arrays;
 
 @Entity
 @Table
-public class UserGroup implements Serializable{
+public class UserGroup{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
+
+
+
+
 
     public void UserGroup() {
 
