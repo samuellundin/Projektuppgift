@@ -98,17 +98,3 @@ src/META-INF/persistence.xml
 *.xml
 
 .idea/libraries/JPA_2_0_2_0.xml
-
-.idea/libraries/JPA_2_0_2_0.xml
-
-src/META-INF/persistence.xml
-
-src/services/testYourService.java
-
-.idea/libraries/JPA_2_0_2_0.xml
-
-out/production/Projektuppgift/META-INF/persistence.xml
-
-src/META-INF/persistence.xml
-
-src/services/testYourService.java
